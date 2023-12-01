@@ -53,7 +53,7 @@ const displayMessage = function() {
 setTimeout(displayMessage, 3000);
 
 //例　名前の入力が完了したら'Hello! 〇〇-san.'とコンソールに表示する
-function greeting(name) {
+/*function greeting(name) {
   console.log('Hello!' + name + '-san');
 }
 
@@ -63,3 +63,49 @@ function inputUserName(callback) {
 }
 
 inputUserName(greeting);
+*/
+
+//配列
+let colors = ['Red', 'Green', 'Blue'];//宣言、初期化
+console.log(colors);
+console.log(colors[0]);
+console.log(colors[1]);
+console.log(colors[2]);
+console.log(colors[3]);//undefined
+
+//jsではデータ型がばらばらでもエラーにならないが、非推奨
+let arr = [1, '2', 3, ['a', 'b', 'c']];
+console.log(arr);
+
+console.log(colors.length);//個数
+console.log(colors[colors.length - 1]);//末尾の値を取得
+let empthArr = [];//空の配列
+console.log(empthArr);
+
+//配列の操作 追加、更新、削除
+let colors2 = ['Red', 'Green', 'Blue'];
+console.log(colors2);
+colors2.push('Black');//末尾に追加
+console.log(colors2);
+colors2.unshift('White');//先頭に追加
+console.log(colors2);
+colors2[1] = 'Aka';//更新
+console.log(colors2);
+let insertArr = ['a', 'b', 'c'];
+insertArr.splice(1, 0, 'D');//指定した位置に１つ以上の値を挿入 splice(位置, 実行内容, 値)
+console.log(insertArr);
+insertArr.splice(2, 0, 'X', 'Y', 'Z');//複数挿入
+console.log(insertArr);
+insertArr.splice(2, 2);//指定した位置から削除 (2番目から2つ削除)
+console.log(insertArr);
+let arr1 = ['a', 'b', 'c'];
+let arr2 = ['d', 'e', 'f'];
+let mergedArr = arr1.concat(arr2);
+console.log(mergedArr);//結合
+console.log(arr1);
+console.log(arr2);
+let arr3 = ['a', 'b', 'c', 'd'];
+arr3.shift();//先頭を削除
+console.log(arr3);
+arr3.pop();//末尾を削除
+console.log(arr3);
