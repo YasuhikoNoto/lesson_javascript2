@@ -109,3 +109,59 @@ arr3.shift();//先頭を削除
 console.log(arr3);
 arr3.pop();//末尾を削除
 console.log(arr3);
+
+//オブジェクト(関連のあるデータと機能の集合)メンテナンス性・再利用性
+//構成要素：変数・関数
+/*
+let user = new Object();
+user.name = 'Taro Yamada';
+user.gender = 'man';
+user.birthYear = 1990;
+console.log(user);
+*/
+//オブジェクト初期化子 (上記と同じ出力内容)
+let user = { name: 'Taro Yamada', gender: 'man', birthYear: 1990};
+console.log(user);
+//ドット記法　（ドットを使用して出力する方法）
+console.log(user.name);
+console.log(user.gender);
+console.log(user.birthYear);
+//ブラケット記法
+console.log(user['name']);
+console.log(user['gender']);
+console.log(user['birthYear']);
+//個数
+console.log(Object.keys(user).length);
+//プロパティ（key）を取得
+let keys = Object.keys(user);
+console.log(keys);
+//追加
+//user.prefecture = 'Kanagawa';
+user['prefecture'] = 'Kanagawa';//上記と同意味
+console.log(user);
+//値の書き換え
+//user.prefecture = 'Chiba';
+user['prefecture'] = 'Chiba';
+console.log(user);
+//結合
+let obj1 = {a: 1, b: 2, c: 3 };
+let obj2 = {d: 4, e: 5, f: 6 };
+let mergedObj = Object.assign(obj1, obj2);
+console.log(mergedObj);
+//空のオブジェクト
+let person = {};
+console.log(person);
+
+//オブジェクトメソッド オブジェクトに関連付けられた関数（メソッド）
+let user2 = {
+  name: 'Taro Yamada',
+  gender: 'man',
+  birthYear: 1990,
+  calcAge: function(thisYear) {
+    // NGコード console.log(birthYear);
+    console.log(this);//thisはuser2オブジェクトを指す
+    console.log(this.birthYear);
+    return thisYear - this.birthYear;
+  }
+}
+console.log(user2.calcAge(2021));
