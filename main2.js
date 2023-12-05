@@ -165,3 +165,21 @@ let user2 = {
   }
 }
 console.log(user2.calcAge(2021));
+
+//繰り返し処理for
+/* for(初期化式; ループ継続条件式; 増減式) { //増減式:ループの回数を管理する変数を加算or減算する
+  繰り返し実行したい処理
+}
+*/
+for(let i = 1; i <= 3; i++) {
+  console.log(i);
+}
+
+let arr4 = ['a', 'b', 'c'];
+for(let i = 0; i < 3; i++) {
+  console.log(arr4[i]);
+}
+
+for(let i = 0; i < arr4.length; i++) {
+  console.log(arr4[i]);
+}
