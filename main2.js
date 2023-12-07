@@ -183,3 +183,32 @@ for(let i = 0; i < 3; i++) {
 for(let i = 0; i < arr4.length; i++) {
   console.log(arr4[i]);
 }
+
+//ループの入れ子
+for(let i = 0; i < 3; i++){
+  for(let j = 0; j < 3; j++){
+    console.log(`i: ${i}, j: ${j}`);
+  }
+}
+const scores = [
+  [100, 99, 98],
+  [90, 89, 88],
+  [80, 79, 78]
+] //配列の中に配列をいれることを二次元配列という
+//手作業の場合
+console.log(scores[0][0]);
+console.log(scores[0][1]);
+console.log(scores[0][2]);
+console.log(scores[1][0]);
+console.log(scores[1][1]);
+console.log(scores[1][2]);
+console.log(scores[2][0]);
+console.log(scores[2][1]);
+console.log(scores[2][2]);
+//ループ入れ子を利用する場合
+for(let i = 0; i < scores.length; i++){
+  for(let j = 0; j < scores[i].length; j++){
+    console.log(scores[i][j]);
+  }
+}
+
