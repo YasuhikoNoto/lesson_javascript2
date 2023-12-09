@@ -212,3 +212,78 @@ for(let i = 0; i < scores.length; i++){
   }
 }
 
+//繰り返し処理while
+/*
+while(条件式) {
+条件式がtrueの時に実行したい処理
+}
+条件を満たす限りループする*/
+let i = 1;
+while(i <= 3) {
+  console.log(i);
+  i++;//i++がなければ無限ループする
+}
+
+let j = 1;
+while(j <= 10) {
+  console.log(j);
+  if(j === 5) {
+    break;//j=5になったタイミングで処理を中断
+  }
+  j++;
+}
+
+//繰り返し処理do while
+/*do {
+  条件式がtrueの時に実行したい処理
+} while(条件式);
+while：条件の判断が前にあり、条件によっては一度もループを実行しない
+do while：条件の判断が後ろにあり、条件にかかわらず、最低1回はループを実行
+*/
+let i2 = 1;
+do {
+  console.log(i2);
+  i2++;
+} while (i2 <= 3);
+
+//繰り返し処理forEach
+/*配列から値を一つずつ取得することができる
+配列名.forEach(コールバック関数(要素の値){
+実行したい処理
+});
+*/
+let colors3 = ['Red', 'Green', 'Blue'];
+/*for文の場合
+for(let i = 0; i < colors3.length; i++) {
+  console.log(colors3[i]);
+}
+*/
+colors3.forEach(function(color){
+  console.log(color)
+});
+
+//繰り返し処理 for...of
+/*
+for(変数 of iterableオブジェクト) {
+  実行したい処理
+}
+iterableオブジェクト：反復可能なオブジェクト（配列・文字列）*/
+const colors4 = ['Red', 'Green', 'Blue'];
+for(const color of colors4) {
+  console.log(color);
+}
+
+const str = 'JavaScript';
+for(const value of str) {
+  console.log(value);
+}
+
+//演習　配列・ループ
+let scores2 = [100, 90, 80, 70, 60];
+let sum = 0;
+for(i = 0; i < scores2.length; i++) {
+  sum += scores2[i];
+}
+let average = sum / scores2.length;
+console.log('合計値：' + sum);
+console.log('平均値：' + average);
